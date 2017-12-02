@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="710.0" style="-fx-background-color: f4f4f6;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cashbond.MenuController">
+   <children>
+      <Rectangle arcHeight="14.0" arcWidth="14.0" fill="WHITE" height="356.0" layoutX="57.0" layoutY="112.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="596.0">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#909090" height="20.0" radius="9.5" width="20.0" />
+         </effect>
+      </Rectangle>
+      <JFXTextField fx:id="cariabsen" focusColor="#4285f4" labelFloat="true" layoutX="83.0" layoutY="284.0" maxWidth="354.0" minWidth="207.0" prefHeight="38.0" prefWidth="223.0" promptText="Absen Siswa">
+         <font>
+            <Font size="15.0" />
+         </font></JFXTextField>
+      <FontAwesomeIconView fill="#4285f4" glyphName="SEARCH" layoutX="91.0" layoutY="235.0" size="72" wrappingWidth="75.99999725818634" />
+      <Label layoutX="173.0" layoutY="172.0" text="Cari Data" textFill="DODGERBLUE">
+         <font>
+            <Font name="Roboto Regular" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="173.0" layoutY="205.0" prefHeight="49.0" prefWidth="123.0" text="SISWA" textFill="DODGERBLUE">
+         <font>
+            <Font name="Roboto Regular" size="40.0" />
+         </font>
+      </Label>
+      <JFXButton graphicTextGap="6.0" layoutX="148.0" layoutY="350.0" nodeOrientation="LEFT_TO_RIGHT" onAction="#cari" prefHeight="31.0" prefWidth="76.0" stylesheets="@style.css" text="CARI" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="13.0" />
+         </graphic>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#909090" />
+         </effect>
+      </JFXButton>
+      <Label fx:id="label" layoutX="456.0" layoutY="172.0" />
+      <JFXTextField fx:id="absencol" editable="false" focusColor="#4285f4" labelFloat="true" layoutX="369.0" layoutY="244.0" maxWidth="253.0" minWidth="119.0" prefHeight="56.0" prefWidth="253.0" promptText="Absen" unFocusColor="#4285f4">
+         <font>
+            <Font size="20.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="namatext" editable="false" focusColor="#4285f4" labelFloat="true" layoutX="369.0" layoutY="158.0" maxWidth="253.0" minWidth="184.0" prefHeight="61.0" prefWidth="253.0" promptText="Nama" unFocusColor="#4285f4">
+         <font>
+            <Font size="23.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="saldotext" editable="false" focusColor="#4285f4" labelFloat="true" layoutX="369.0" layoutY="326.0" maxWidth="253.0" minWidth="130.0" prefHeight="56.0" prefWidth="253.0" promptText="Kas" unFocusColor="#4285f4">
+         <font>
+            <Font size="20.0" />
+         </font></JFXTextField>
+      <Label layoutX="91.0" layoutY="412.0" text="Kas" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXButton graphicTextGap="6.0" layoutX="540.0" layoutY="407.0" nodeOrientation="LEFT_TO_RIGHT" onAction="#simpan" prefHeight="30.0" prefWidth="85.0" stylesheets="@style.css" text="Simpan" textFill="WHITE">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#909090" />
+         </effect>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="SAVE" size="13.0" text="" />
+         </graphic>
+      </JFXButton>
+      <JFXButton graphicTextGap="6.0" layoutX="462.0" layoutY="407.0" nodeOrientation="LEFT_TO_RIGHT" onAction="#update" prefHeight="30.0" prefWidth="68.0" style="-fx-background-color: #22A587;" stylesheets="@style.css" text="Ubah" textFill="WHITE">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#909090" />
+         </effect>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" fontSmoothingType="LCD" glyphName="PENCIL" size="13.0" />
+         </graphic>
+      </JFXButton>
+      <JFXButton alignment="CENTER" graphicTextGap="6.0" layoutX="376.0" layoutY="407.0" nodeOrientation="LEFT_TO_RIGHT" onAction="#hapus" prefHeight="30.0" prefWidth="76.0" style="-fx-background-color: #E59112;" stylesheets="@style.css" text=" Hapus" textAlignment="CENTER" textFill="WHITE">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#909090" />
+         </effect>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="TRASH" size="14" textAlignment="CENTER" />
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="CENTER" graphicTextGap="0.0" layoutX="564.0" layoutY="327.0" onAction="#tambah" opacity="0.78" prefHeight="44.0" prefWidth="43.0" ripplerFill="#4387f5" text=" " textAlignment="CENTER">
+         <graphic>
+            <FontAwesomeIconView fill="#4285f4" glyphName="PLUS" size="35" smooth="false" strokeWidth="0.0" />
+         </graphic>
+      </JFXButton>
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="200.0" focusTraversable="true" layoutY="80.0" prefHeight="420.0" prefWidth="200.0" />
+      <Rectangle fill="#297ecc" height="80.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="710.0">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#909090" height="20.0" radius="9.5" width="20.0" />
+         </effect></Rectangle>
+      <Label layoutX="272.0" layoutY="6.0" prefHeight="62.0" prefWidth="167.0" text="CashBond" textFill="WHITE">
+         <font>
+            <Font name="Handycheera" size="36.0" />
+         </font>
+      </Label>
+      <JFXHamburger fx:id="krabby" layoutX="30.0" layoutY="25.0" prefHeight="20.0" prefWidth="25.0" styleClass="hamburger" stylesheets="@style.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXHamburger>
+   </children>
+</AnchorPane>

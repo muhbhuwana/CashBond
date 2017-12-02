@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="710.0" style="-fx-background-color: f4f4f6;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cashbond.TambahSiswaController">
+   <children>
+      <Rectangle arcHeight="14.0" arcWidth="14.0" fill="WHITE" height="354.0" layoutX="66.0" layoutY="112.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="259.0">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#909090" height="20.0" radius="9.5" width="20.0" />
+         </effect></Rectangle>
+      <Rectangle arcHeight="14.0" arcWidth="14.0" fill="WHITE" height="256.0" layoutX="385.0" layoutY="110.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="259.0">
+         <effect>
+            <DropShadow color="#909090" />
+         </effect></Rectangle>
+      <JFXTextField fx:id="absen" cache="true" focusColor="#4285f4" labelFloat="true" layoutX="79.0" layoutY="156.0" maxWidth="205.0" minWidth="176.0" prefHeight="31.0" prefWidth="205.0" promptText="Absen" styleClass="input" stylesheets="@style.css" unFocusColor="#030303">
+         <font>
+            <Font name="Roboto Light" size="12.0" />
+         </font>
+         
+      </JFXTextField>
+      <JFXDatePicker fx:id="tgl" defaultColor="#4285f4" layoutX="81.0" layoutY="260.0" prefHeight="31.0" prefWidth="205.0" promptText="Tanggal Lahir" />
+      <JFXTextField fx:id="nama" cache="true" focusColor="#4285f4" labelFloat="true" layoutX="79.0" layoutY="208.0" maxWidth="205.0" minWidth="176.0" prefHeight="31.0" prefWidth="205.0" promptText="Nama" styleClass="input" stylesheets="@style.css" unFocusColor="#030303">
+         <font>
+            <Font name="Roboto Light" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField fx:id="saldo" cache="true" focusColor="#4285f4" labelFloat="true" layoutX="427.0" layoutY="283.0" maxWidth="198.0" minWidth="176.0" prefHeight="31.0" prefWidth="176.0" promptText="Saldo Awal" styleClass="input" stylesheets="@style.css" unFocusColor="#030303">
+         <font>
+            <Font name="Roboto Light" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField fx:id="alamat" cache="true" focusColor="DODGERBLUE" labelFloat="true" layoutX="79.0" layoutY="406.0" maxWidth="205.0" minWidth="176.0" prefHeight="31.0" prefWidth="205.0" promptText="Alamat" styleClass="input" stylesheets="@style.css" unFocusColor="#030303">
+         <font>
+            <Font name="Roboto Light" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <Rectangle arcHeight="15.0" arcWidth="15.0" fill="#4285f4" height="39.0" layoutX="86.0" layoutY="90.0" nodeOrientation="LEFT_TO_RIGHT" opacity="0.85" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="151.0">
+         <effect>
+            <DropShadow color="#9a9a9a" />
+         </effect>
+      </Rectangle>
+      <Label layoutX="103.0" layoutY="102.0" text="Data Siswa" textFill="WHITE">
+         <font>
+            <Font name="Roboto Regular" size="13.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="tempat" cache="true" focusColor="#4285f4" labelFloat="true" layoutX="81.0" layoutY="310.0" maxWidth="205.0" minWidth="176.0" prefHeight="31.0" prefWidth="205.0" promptText="Tempat Lahir" styleClass="input" stylesheets="@style.css" unFocusColor="#030303">
+         <font>
+            <Font name="Roboto Light" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <Rectangle arcHeight="14.0" arcWidth="14.0" fill="#4285f4" height="128.0" layoutX="385.0" layoutY="108.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="259.0" />
+      <Label layoutX="429.0" layoutY="145.0" text="Kas yang Harus Di Bayar :" textFill="WHITE">
+         <font>
+            <Font name="Roboto Regular" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="453.0" layoutY="173.0" text="Rp. 2000" textFill="WHITE">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="kelamin" layoutX="86.0" layoutY="359.0" prefHeight="25.0" prefWidth="200.0" />
+      <JFXButton layoutX="534.0" layoutY="404.0" onAction="#prosestambah" prefHeight="27.0" prefWidth="98.0" stylesheets="@style.css" text="SIMPAN" textFill="WHITE">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#909090" />
+         </effect>
+         <font>
+            <Font size="11.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="404.0" layoutY="404.0" onAction="#proseshapus" prefHeight="27.0" prefWidth="98.0" stylesheets="@style.css" text="HAPUS" textFill="WHITE">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#909090" />
+         </effect>
+         <font>
+            <Font size="11.0" />
+         </font>
+      </JFXButton>
+      <Rectangle fill="#4285f4" height="31.0" layoutX="385.0" layoutY="214.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="259.0" />
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="200.0" layoutY="80.0" prefHeight="420.0" prefWidth="200.0" />
+      <Rectangle fill="#297ecc" height="80.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="710.0">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#909090" height="20.0" radius="9.5" width="20.0" />
+         </effect>
+      </Rectangle>
+      <Label layoutX="238.0" layoutY="4.0" prefHeight="62.0" prefWidth="234.0" text="Tambah Siswa" textFill="WHITE">
+         <font>
+            <Font name="Handycheera" size="36.0" />
+         </font>
+      </Label>
+      <JFXHamburger fx:id="krabby" layoutX="30.0" layoutY="25.0" prefHeight="20.0" prefWidth="25.0" styleClass="hamburger" stylesheets="@style.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXHamburger>
+   </children>
+</AnchorPane>

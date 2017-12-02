@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: f4f4f6;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cashbond.UpdateSiswaController">
+   <children>
+      <Rectangle arcHeight="14.0" arcWidth="14.0" fill="WHITE" height="265.0" layoutX="39.0" layoutY="113.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="244.0">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#909090" height="20.0" radius="9.5" width="20.0" />
+         </effect></Rectangle>
+      <Rectangle arcHeight="14.0" arcWidth="14.0" fill="WHITE" height="188.0" layoutX="318.0" layoutY="110.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="244.0">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#909090" height="20.0" radius="9.5" width="20.0" />
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#297ecc" height="75.0" layoutY="-9.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#909090" height="20.0" radius="9.5" width="20.0" />
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="15.0" arcWidth="15.0" fill="#4285f4" height="39.0" layoutX="59.0" layoutY="91.0" nodeOrientation="LEFT_TO_RIGHT" opacity="0.85" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="151.0">
+         <effect>
+            <DropShadow color="#9a9a9a" />
+         </effect>
+      </Rectangle>
+      <JFXTextField fx:id="absen" cache="true" editable="false" focusColor="#4285f4" labelFloat="true" layoutX="52.0" layoutY="168.0" maxWidth="205.0" minWidth="176.0" prefHeight="31.0" prefWidth="205.0" promptText="Absen" styleClass="input" stylesheets="@style.css" unFocusColor="#030303">
+         <font>
+            <Font name="Roboto Light" size="12.0" />
+         </font>
+         
+      </JFXTextField>
+      <JFXTextField fx:id="nama" cache="true" focusColor="#4285f4" labelFloat="true" layoutX="52.0" layoutY="220.0" maxWidth="205.0" minWidth="176.0" prefHeight="31.0" prefWidth="205.0" promptText="Nama" styleClass="input" stylesheets="@style.css" unFocusColor="#030303">
+         <font>
+            <Font name="Roboto Light" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXTextField fx:id="alamat" cache="true" focusColor="DODGERBLUE" labelFloat="true" layoutX="337.0" layoutY="183.0" maxWidth="205.0" minWidth="176.0" prefHeight="31.0" prefWidth="205.0" promptText="Alamat" styleClass="input" stylesheets="@style.css" unFocusColor="#030303">
+         <font>
+            <Font name="Roboto Light" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <Label layoutX="91.0" layoutY="103.0" text="Data Siswa" textFill="WHITE">
+         <font>
+            <Font name="Roboto Regular" size="13.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="tempat" cache="true" focusColor="#4285f4" labelFloat="true" layoutX="52.0" layoutY="318.0" maxWidth="205.0" minWidth="176.0" prefHeight="31.0" prefWidth="205.0" promptText="Tempat Lahir" styleClass="input" stylesheets="@style.css" unFocusColor="#030303">
+         <font>
+            <Font name="Roboto Light" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXComboBox fx:id="kelamin" layoutX="340.0" layoutY="130.0" prefHeight="25.0" prefWidth="200.0" />
+      <Label layoutX="227.0" layoutY="-2.0" prefHeight="62.0" prefWidth="167.0" text="Edit Siswa" textFill="WHITE">
+         <font>
+            <Font name="Handycheera" size="30.0" />
+         </font>
+      </Label>
+      <JFXDatePicker fx:id="date" defaultColor="#4285f4" layoutX="54.0" layoutY="266.0" prefHeight="31.0" prefWidth="205.0" promptText="Tanggal Lahir" />
+      <JFXTextField fx:id="kas" cache="true" focusColor="DODGERBLUE" labelFloat="true" layoutX="338.0" layoutY="238.0" maxWidth="205.0" minWidth="176.0" prefHeight="31.0" prefWidth="205.0" promptText="Kas" styleClass="input" stylesheets="@style.css" unFocusColor="#030303">
+         <font>
+            <Font name="Roboto Light" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXButton graphicTextGap="6.0" layoutX="469.0" layoutY="328.0" nodeOrientation="LEFT_TO_RIGHT" onAction="#prosestambah" prefHeight="30.0" prefWidth="85.0" stylesheets="@style.css" text="Simpan" textFill="WHITE">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#909090" />
+         </effect>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="SAVE" size="13.0" text="" />
+         </graphic>
+      </JFXButton>
+      <JFXButton alignment="CENTER" graphicTextGap="6.0" layoutX="355.0" layoutY="328.0" nodeOrientation="LEFT_TO_RIGHT" onAction="#hapus" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: #E59112;" stylesheets="@style.css" text="Batal" textAlignment="CENTER" textFill="WHITE">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#909090" />
+         </effect>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="UNDO" size="14" textAlignment="CENTER" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>
